@@ -18,6 +18,7 @@ public class ArrayCopyDemo {
 
         System.arraycopy(copyFrom, 2, copyTo, 0, 7);
         System.out.println(new String(copyTo));
+        
     }
 }
 
