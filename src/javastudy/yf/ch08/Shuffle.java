@@ -16,6 +16,7 @@ import java.util.Random;
  */
 
 public class Shuffle {
+	// simple ArrayList demo
     public static void main(String[] args) {
         List<String> list = new ArrayList<String>();
         for (String a : args)
