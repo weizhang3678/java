@@ -1,5 +1,7 @@
 package javastudy.yf.ch02;
 
+import java.math.BigDecimal;
+
 /**
  *
  * Copyright 2020 YF Studio
@@ -49,6 +51,11 @@ public class FloatingPointDemo {
 		System.out.println(0.0 / 0);
 		System.out.println(1.0 / 0);
 		System.out.println(-1.0 / 0);
+		
+		//use class: BigDecimal
+		double d3 = BigDecimal.valueOf(2.0).subtract(BigDecimal.valueOf(1.1)).doubleValue();
+		System.out.println(d3);
+		
 
 	}
 
