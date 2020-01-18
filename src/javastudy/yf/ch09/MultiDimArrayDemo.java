@@ -12,6 +12,7 @@ package javastudy.yf.ch09;
 
 public class MultiDimArrayDemo {
     public static void main(String[] args) {
+    	// This is a simple 2D arrays
         String[][] names = {
             {"Mr. ", "Mrs. ", "Ms. "},
             {"Smith", "Jones"}
