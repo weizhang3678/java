@@ -1,6 +1,8 @@
 # java
 By the guideline of AP cource Framework and Component published by College Board.
+
 The unit guideline is:
+
 Unit 0: Start with Java
 Unit 1: Primitive Types
 Unit 2: Using Objects
