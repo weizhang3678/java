@@ -8,11 +8,13 @@ package javastudy.yf.ch03;
  * 
  * Created on Jan 20, 2020 1:28:39 PM
  * 
+ * This is a demo to show default constructor without arguments
+ * There will be a compiler error during this demo
+ * 
  */
 
 public class DefaultConstructorDemo {
-   // This is a demo
-   // There will be a compiler error during this demo
+
 }
 
 class Person{
