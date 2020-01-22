@@ -52,5 +52,9 @@ public class ArrayDemo {
                            + anArray[8]);
         System.out.println("Element at index 9: "
                            + anArray[9]);
+        
+        Object integerObj = new Integer(2);
+
+        System.out.println((String) integerObj);
     }
 } 
