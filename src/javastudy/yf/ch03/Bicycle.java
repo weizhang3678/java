@@ -17,6 +17,10 @@ public class Bicycle {
     public int cadence;
     public int gear;
     public int speed;
+    
+    // add a class variable for the
+    // number of Bicycle objects instantiated
+    private static int numberOfBicycles = 0;
         
     // the Bicycle class has
     // one constructor
