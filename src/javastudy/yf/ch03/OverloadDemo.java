@@ -12,7 +12,7 @@ package javastudy.yf.ch03;
  * 
  */
 
-public class DataArtist {
+public class OverloadDemo {
     
     public void draw(String s) {
         

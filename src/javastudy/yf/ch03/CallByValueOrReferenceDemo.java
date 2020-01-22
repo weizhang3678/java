@@ -12,25 +12,39 @@ import java.util.Arrays;
  * 
  */
 
-public class Main {
+public class CallByValueOrReferenceDemo {
+	
     public static void main(String[] args) {
         int[] scores = new int[] { 88, 77, 51, 66 };
-        Score s = new Score(scores);
+        int top = 88;
+        String level = "two";
+        Score s = new Score(scores, top, level);
         s.printScores();
         scores[2] = 99;
+        top = 99;
+        level = "first";
         s.printScores();
     }
 }
 
 class Score {
+	// call by reference 
     private int[] scores;
-    public Score(int[] scores) {
+    // call by value
+    private int top;
+    // call by value
+    private String level;
+    public Score(int[] scores, int top, String level) {
     	 // a demo to show the safety of value reference
         // this.scores = Arrays.copyOf(scores, scores.length);
     	 this.scores = scores;
+    	 this.top = top;
+    	 this.level = level;
     }
 
     public void printScores() {
-        System.out.println(Arrays.toString(scores));
+        System.out.println("scores:" + Arrays.toString(scores));
+        System.out.println("top:" + top);
+        System.out.println("level:" + level);
     }
 }

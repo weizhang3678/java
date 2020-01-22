@@ -140,6 +140,12 @@ public class StringDemo {
             sj.add(name);
         }
         System.out.println(sj.toString());
+        
+        int a = 72;
+        int b = 105;
+        int c = 65281;
+        // This is wrong: String test = a + b + c;
+        String test = ""+ a + b + c;
 	}
 
 }
