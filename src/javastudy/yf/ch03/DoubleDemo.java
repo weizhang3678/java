@@ -21,7 +21,7 @@ public class DoubleDemo {
 		
 		// create Double object
 		Double d1 = 3.0;
-		Double d2 = new Double("3.0qq");
+		Double d2 = new Double("3.0");
 		Double d3 = new Double(3);
 		System.out.println(d1);
 		System.out.println(d2);
@@ -54,14 +54,25 @@ public class DoubleDemo {
 		System.out.println(d9.compareTo(d10));
 		System.out.println(Double.compare(d9, d10));
 		
+		// AutoBoxing and Unboxing
+		double result = sumDoubleDouble(1.3, 3.6);
+		System.out.println(result);
+		System.out.println(sumIntegerInteger(3,5));
+		
 		// NumberFormatException
 		Double d17 = Double.parseDouble("w"+3.0);
 		Double d18 = new Double("w1.0");
 
-		
-		
-		
-
+	}
+	
+	private static Double sumDoubleDouble(Double firstNumber, Double secondNumber) {
+		double result = firstNumber + secondNumber;
+		return result;		
+	}
+	
+	private static Double sumIntegerInteger(Integer firstNumber, Integer secondNumber) {
+		double result = firstNumber + secondNumber;
+		return result;		
 	}
 
 }

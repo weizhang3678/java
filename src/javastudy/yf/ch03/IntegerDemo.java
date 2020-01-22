@@ -54,9 +54,20 @@ public class IntegerDemo {
 		System.out.println(i7.compareTo(i8));
 		System.out.println(Integer.compare(i7, i8));
 		
+		
+		// AutoBoxing and Unboxing
+		int result = sum(3,4);
+		System.out.println(result);
+		
 		// NumberFormatException
 		Integer i17 = Integer.parseInt(""+3.0);
 		Integer i18 = new Integer("1.0");
+
+	}
+	
+	private static Integer sum(Integer firstNumber, Integer secondNumber) {
+		int result = firstNumber + secondNumber;
+		return result;		
 	}
 
 }
