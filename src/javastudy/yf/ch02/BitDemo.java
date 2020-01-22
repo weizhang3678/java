@@ -11,6 +11,18 @@ package javastudy.yf.ch02;
  */
 
 public class BitDemo {
+	
+	/**
+	 *  left shift until overflow
+	 */
+	public void shiftTest() {
+	    int n = 1;
+	    while (n != 0) {
+	        n = n << 1;
+	        System.out.println(Integer.toBinaryString(n));
+	    }
+	}
+		
 	public static void main(String[] args) {
 		int bitmask = 0x000F;
 		int val = 0x0022;
