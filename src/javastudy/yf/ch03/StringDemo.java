@@ -68,6 +68,8 @@ public class StringDemo {
         System.out.println(s3 == s4);
         System.out.println(s3.equals(s4));
         
+        System.out.println("******** Compare *******");
+        
         System.out.println("hello".compareTo("HELLO"));
         System.out.println("hello".compareToIgnoreCase("HELLO"));
         
@@ -146,6 +148,7 @@ public class StringDemo {
         int c = 65281;
         // This is wrong: String test = a + b + c;
         String test = ""+ a + b + c;
+ 
 	}
 
 }
