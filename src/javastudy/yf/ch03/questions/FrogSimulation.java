@@ -1,4 +1,4 @@
-package javastudy.yf.ch03;
+package javastudy.yf.ch03.questions;
 
 /**
  *
@@ -7,6 +7,8 @@ package javastudy.yf.ch03;
  * All right reserved.
  * 
  * Created on Jan 22, 2020 5:39:16 PM
+ * 
+ * 2018 AP FREE-RESPONSE QUESTION 1
  * 
  */
 
