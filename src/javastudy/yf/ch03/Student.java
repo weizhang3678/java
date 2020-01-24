@@ -16,79 +16,28 @@ package javastudy.yf.ch03;
  * 
  */
 
-public class Student {
-    
-    public int grade;  // field
-    public int gender; 
-    public int[] marks;
-    
-    /**
-     * no-argument constructor
-     */
-    public Student(){
-    	
-    }
-    
-    /**
-     * one-argument constructor
-     * @param grade
-     */
-    public Student(int grade) {
-    	this.grade = grade;
-    }
-    
-    /**
-     * two-argument constructor
-     * @param grade
-     * @param gender
-     */
-    public Student(int grade, int gender) {
-    	this(grade);
-    	this.gender = gender;
-    }
-  
-    /* constructor */
-    public Student(int grade, int gender, int... marks) {
-        this(grade,gender);
-        this.marks = marks;
-    }
-        
-    public void study() {
-        // TODO
-    }
-        
-    public void joinClub(String clubName) {
-        // TODO;
-    }
 
-	public int getGrade() {
-		return grade;
-	}
-
-	public void setGrade(int grade) {
-		this.grade = grade;
-	}
-
-	public int getGender() {
-		return gender;
-	}
-
-	public void setGender(int gender) {
-		this.gender = gender;
-	}
-
-	public int[] getMarks() {
-		return marks;
-	}
-
-	// parameters number is not fixed
-	public void setMarks(int... marks) {
-		this.marks = marks;
-	}
-    
-    
-        
-}
+public class Student {    
+   private int grade;  // instance field
+   private int gender; //instance  field
+   private static String nationality; // class field 
+   private Supervisor supervisor; //instance  field
+   /* constructor */
+   public Student(Supervisor  supervisor) {
+        this.supervisor = supervisor;
+   }   
+   public Student(int grade, int gender) {
+       this.grade = grade;
+       this.gender = gender;
+   }        
+   public void study() {
+       // TODO
+   }        
+   public void joinClub(String clubName) {
+       // TODO;
+   }
+       
+}
 /**
  * 
  * @author zhangwei
@@ -98,9 +47,13 @@ class CreateStudentDemo{
 	
 	public static void main(String[] args) {
 		
-		Student wzhang = new Student(11, 1, new int[]{100,100,100});
+		Student wzhang = new Student(11, 1);
+		
+		Supervisor supervisor = new Supervisor();
+		Student siLi = new Student(supervisor);
 		wzhang.study();
 		wzhang.joinClub("reading");
+		
 	}
 	
 }
