@@ -1,5 +1,7 @@
 package javastudy.yf.ch03;
 
+import java.util.Date;
+
 /**
  *
  * Copyright 2020 YF Studio
@@ -35,6 +37,10 @@ public class Student {
    }        
    public void joinClub(String clubName) {
        // TODO;
+   }
+   
+   public void takeBreak(Date start, Date end, String reason) {
+	   
    }
        
 }
