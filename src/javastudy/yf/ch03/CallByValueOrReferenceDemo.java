@@ -18,8 +18,10 @@ public class CallByValueOrReferenceDemo {
         int[] scores = new int[] { 88, 77, 51, 66 };
         int top = 88;
         String level = "two";
+       
         Score s = new Score(scores, top, level);
         s.printScores();
+        
         scores[2] = 99;
         top = 99;
         level = "first";
@@ -36,7 +38,7 @@ class Score {
     private String level;
     public Score(int[] scores, int top, String level) {
     	 // a demo to show the safety of value reference
-        // this.scores = Arrays.copyOf(scores, scores.length);
+         // this.scores = Arrays.copyOf(scores, scores.length);
     	 this.scores = scores;
     	 this.top = top;
     	 this.level = level;
