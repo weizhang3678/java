@@ -11,9 +11,21 @@ package javastudy.yf.ch05;
  */
 
 public class ContinueDemo {
-    public static void main(String[] args) {
-
-        String searchMe = "peter piper picked a " + "peck of pickled peppers";
+	
+	public static void simple() {
+		int sum = 0;
+		for(int i= 1; i< 100;i++){
+		    if(i % 2 == 0 ){
+		          continue;
+		    }
+		    sum += i;
+		}
+		System.out.println("sum="+sum);
+		
+	}
+	
+	public static void searchP() {
+		String searchMe = "peter piper picked a " + "peck of pickled peppers";
         int max = searchMe.length();
         int numPs = 0;
 
@@ -26,5 +38,10 @@ public class ContinueDemo {
             numPs++;
         }
         System.out.println("Found " + numPs + " p's in the string.");
+	}
+	
+    public static void main(String[] args) {
+    	simple();
+        
     }
 }
