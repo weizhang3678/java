@@ -13,12 +13,16 @@ package javastudy.yf.questions.q2016;
  */
 
 public class RandomLetterChooser extends RandomStringChooser {
+
+
 	/**
 	 * Constructs a random letter chooser using the given string str. *
 	 * Precondition: str contains only letters.
 	 */
 	public RandomLetterChooser(String str) {
-		/* to be implemented in part (b) */ }
+		super(getSingleLetters(str));
+
+	}
 
 	/**
 	 * Returns an array of single-letter strings. Each of these strings consists of
@@ -29,5 +33,14 @@ public class RandomLetterChooser extends RandomStringChooser {
 	public static String[] getSingleLetters(String str) {
 		/* implementation not shown */
 		return null;
+	}
+	
+	public static void main(String[] args){
+		RandomLetterChooser letterChooser = new RandomLetterChooser("cat");
+		   for (int k = 0; k < 4; k++)
+		   {
+		      System.out.print(letterChooser.getNext());
+		   }
+		
 	}
 }
