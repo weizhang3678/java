@@ -36,14 +36,17 @@ public class SwapDemo {
 
 	public static void main(String[] args) {
 		int[] arr = {1,2};
+		
 		System.out.println("before: " + Arrays.toString(arr));
 		swap(arr);
+		
 		System.out.println("after: " + Arrays.toString(arr));
 		
-		//int number1 = 1, number2=2;
-		//swap(number1,number2);
+		int number1 = 1, number2=2;
+		swap(number1,number2);
 
-		//System.out.println("number1="+ number1 +";number2="+number2);
+		System.out.println("number1="+ number1 +";number2="+number2);
+		
 	}
 
 }

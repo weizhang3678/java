@@ -1,4 +1,4 @@
-package javastudy.yf.ch06.queations;
+package javastudy.yf.questions.q2017;
 
 /**
  *

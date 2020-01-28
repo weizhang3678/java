@@ -1,4 +1,4 @@
-package javastudy.yf.ch05.questions;
+package javastudy.yf.questions.q2018;
 
 import java.util.ArrayList;
 

@@ -80,15 +80,17 @@ public class StringDemo {
         System.out.println(s.contains("ll")); // true
         
         // search substring
-        System.out.println(s.indexOf("l")); // 2
+        System.out.println("hello".indexOf("l")); // 2
         System.out.println(s.lastIndexOf("l")); // 3
         System.out.println(s.startsWith("He")); // true
         System.out.println(s.endsWith("lo")); // true
         
         // get substring
         // index starts from 0 instead of 1
-        System.out.println(s.substring(2)); 
-        System.out.println(s.substring(2, 4)); 
+        System.out.println("\"hello\".charAt(0)=" + "hello".charAt(0)); 
+        System.out.println("\"hello\".charAt(4)=" + "hello".charAt(4)); 
+        System.out.println("hello".substring(2)); 
+        System.out.println("hello".substring(2, 4)); 
         
         System.out.println(s.substring(-2, 2)); 
         
