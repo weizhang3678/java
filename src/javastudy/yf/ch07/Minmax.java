@@ -13,7 +13,7 @@ package javastudy.yf.ch07;
 public class Minmax {
 
 	public static void main(String[] args) {
-		int[] values = { 6, 2, 1, 7, 12, 5 };
+		int[] values = { 60, 2, 1, 7, 12, 5, 29 };
 		int min = values[0]; // initialize min to the first element
 		int max = values[0];
 		for (int val : values) {
