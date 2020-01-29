@@ -12,6 +12,23 @@ package javastudy.yf.ch07;
 
 public class ArrayDemo {
     public static void main(String[] args) {
+    	// Initializer Lists to create array
+    	int[] scores = {98,58,97,78,90,91,94,69,100};
+    	String[] types = { "VIP Diamond" , "VIP Golden" , "VIP Silver" , "Normal"};
+    	
+    	for (int i = 0; i < scores.length; i++)
+    	{
+    	    System.out.println(  scores[i] );
+    	}
+    	for (int i = scores.length-1; i >=0; i--)
+    	{
+    	    System.out.println(  scores[i] );
+    	}
+    	for (int i = 0; i < types.length; i++)
+    	{
+    	    System.out.println(  types[i] );
+    	}
+    	
         // declares an array of integers
         int[] anArray;
 
