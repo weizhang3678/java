@@ -24,7 +24,7 @@ public class RecursionDemo {
 
 	     } else {
 
-	          return ints.remove(0) + sum1(ints);
+	          return ints.remove(0) + sum2(ints);
 
 	     }
 
