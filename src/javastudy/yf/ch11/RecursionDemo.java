@@ -15,7 +15,8 @@ import java.util.List;
 
 public class RecursionDemo {
 	
-	public static int val(List<Integer> ints) {
+	
+	public static int sum2(List<Integer> ints) {
 
 	     if(ints.size() == 0) {
 
@@ -23,13 +24,13 @@ public class RecursionDemo {
 
 	     } else {
 
-	          return ints.remove(0) + val(ints);
+	          return ints.remove(0) + sum1(ints);
 
 	     }
 
 	}
 	
-	public static int val1(List<Integer> ints) {
+	public static int sum1(List<Integer> ints) {
 
 	     if(ints.size() == 0) {
 
@@ -37,7 +38,7 @@ public class RecursionDemo {
 
 	     } else {
 
-	          return ints.get(0) + val1(ints.subList(1, ints.size()));
+	          return ints.get(0) + sum1(ints.subList(1, ints.size()));
 
 	     }
 
@@ -53,8 +54,8 @@ public class RecursionDemo {
 		list.add(58);
 		list.add(58);
 		list.add(58);
-		System.out.println(val1(list));
-		System.out.println(val(list));
+		System.out.println(sum2(list));
+		System.out.println(sum1(list));
 	}
 
 }
