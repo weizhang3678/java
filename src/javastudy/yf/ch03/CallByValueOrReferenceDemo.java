@@ -14,7 +14,28 @@ import java.util.Arrays;
 
 public class CallByValueOrReferenceDemo {
 	
+	public static void test(String str, int i, Student student, int[] arr) {
+		str += ", Super!";
+		i++;
+		student.grade++;
+		arr[0]++;
+	}
+	
     public static void main(String[] args) {
+    	Student student = new Student(2,0);
+    	int[] arr = {1,1};
+    	String str = "Super";
+    	int number = 10;
+    	System.out.println("Before: str = " + str);
+    	System.out.println("Before: number = " + number);
+    	System.out.println("Before: student.grade = " + student.grade);
+    	System.out.println("Before: arr[0] = " + arr[0]);
+    	test(str, number, student,arr);
+    	System.out.println("After: str = " + str);
+    	System.out.println("After: number = " + number);
+    	System.out.println("After: student.grade = " + student.grade);
+    	System.out.println("After: arr[0] = " + arr[0]);
+    	
         int[] scores = new int[] { 88, 77, 51, 66 };
         int top = 88;
         String level = "two";

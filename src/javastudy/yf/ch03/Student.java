@@ -20,8 +20,8 @@ import java.util.Date;
 
 
 public class Student {    
-   private int grade;  // instance field
-   private int gender; //instance  field
+    int grade;  // instance field
+    int gender; //instance  field
    private static String nationality; // class field 
    private Supervisor supervisor; //instance  field
    /* constructor */
