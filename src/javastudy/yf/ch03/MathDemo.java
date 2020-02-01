@@ -34,7 +34,7 @@ public class MathDemo {
          * */
  
         System.out.println("------------------------------------------");
-        System.out.println("Math.max(2.3,4.5) is "+Math.max(7,15));//15
+        System.out.println("Math.max(2.3,4.5) is "+Math.max(2.3,4.5));//4.5
         System.out.println("Math.min(2.3,4.5) is "+Math.min(2.3,4.5));//2.3
  
         /**
