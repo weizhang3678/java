@@ -13,13 +13,46 @@ package javastudy.yf.ch09;
 public class MultiDimArrayDemo {
     public static void main(String[] args) {
     	// This is a simple 2D arrays
+    	 int[][] ns = {
+    	            { 1, 2, 3, 4 },
+    	            { 5, 6, 7, 8 },
+    	            { 9, 10, 11, 12 }
+    	        };
+    	 
+    	// This is a simple 2D arrays
         String[][] names = {
             {"Mr. ", "Mrs. ", "Ms. "},
             {"Smith", "Jones"}
         };
+        
+        String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
+        
         // Mr. Smith
         System.out.println(names[0][0] + names[1][0]);
         // Ms. Jones
         System.out.println(names[0][2] + names[1][1]);
+        
+        // declare arrays
+        int[][] ticketInfo;
+        String[][] seatingChart;
+
+        // create arrays
+        ticketInfo = new int [2][3];
+        seatingChart =  new String [3][2];
+
+        // initialize the array elements
+        ticketInfo[0][0] = 15;
+        ticketInfo[0][1] = 10;
+        ticketInfo[0][2] = 15;
+        ticketInfo[1][0] = 25;
+        ticketInfo[1][1] = 20;
+        ticketInfo[1][2] = 25;
+        seatingChart[0][0] = "Jamal";
+        seatingChart[0][1] = "Maria";
+        seatingChart[1][0] = "Jacob";
+        seatingChart[1][1] = "Suzy";
+        seatingChart[2][0] = "Emma";
+        seatingChart[2][1] = "Luke";
+        
     }
 }
