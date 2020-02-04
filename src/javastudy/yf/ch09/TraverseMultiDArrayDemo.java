@@ -1,5 +1,7 @@
 package javastudy.yf.ch09;
 
+import java.util.Arrays;
+
 /**
  *
  * Copyright 2020 YF Studio
@@ -50,9 +52,24 @@ public class TraverseMultiDArrayDemo {
 
 	public static void main(String[] args) {
 		int[][] ns = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
-		traverseRow(ns);
-		traverseEnhancedRow(ns);
-		traverseWhileRow(ns);
+		//traverseRow(ns);
+		//traverseEnhancedRow(ns);
+		//traverseWhileRow(ns);
+		
+		int[][] arr = { {3,2,1},{1,2,3} };
+		for (int row = 1; row < arr.length; row++) {
+		   for (int col = 1; col < arr[0].length; col++) {
+		      if (arr[row][col] % 2 == 1)
+		      {
+		          arr[row][col] = arr[row][col] + 1;
+		      }
+		      if (arr[row][col] % 2 == 0)
+		      {
+		          arr[row][col] = arr[row][col] * 2;
+		      }
+		   }
+		}
+		System.out.println(Arrays.deepToString(arr));
 	}
 
 }
