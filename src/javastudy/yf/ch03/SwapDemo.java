@@ -14,6 +14,12 @@ import java.util.Arrays;
 
 public class SwapDemo {
 	
+	public static void swap(Integer a, Integer b) {
+		int temp = a;
+		a = b;
+		b = temp; 
+	}
+	
 	public static void swap(int a, int b) {
 		System.out.println("a="+a +";b="+b);
 		int temp = a;
@@ -47,6 +53,12 @@ public class SwapDemo {
 
 		System.out.println("number1="+ number1 +";number2="+number2);
 		
+		
+		Integer i1 = 1;
+		Integer i2 = 2;
+		System.out.println("before: i1 = " + i1 +";i2 = " + i2);
+		swap(i1,i2);
+		System.out.println("after: i1 = " + i1 +";i2 = " + i2);
 	}
 
 }
