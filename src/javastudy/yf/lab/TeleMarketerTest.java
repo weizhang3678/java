@@ -51,7 +51,7 @@ public class TeleMarketerTest {
 				&& (second.equals(third));
 		if (isMartketer) {
 			System.out.println("ignore");
-		} else if(validInputs){
+		} else {
 			System.out.println("answer");
 		}
 		getInput.close();
