@@ -1,5 +1,7 @@
 package javastudy.yf.ch06;
 
+import java.util.ArrayList;
+
 /**
  *
  * Copyright 2020 YF Studio
@@ -14,16 +16,17 @@ package javastudy.yf.ch06;
 
 public class OverloadDemo {
     
-    public void draw(String s) {
+    public void sum(int[] numbers) {
         
     }
-    public void draw(int i) {
+    public void sum(ArrayList<Integer> numbers) {
         
     }
-    public void draw(double f) {
+    public void sum(double[] numbers) {
         
     }
-    public void draw(int i, double f) {
-        
-    }
+    // This is as same as the second one
+//    public void sum(ArrayList<Double> numbers) {
+//        
+//    }
 }

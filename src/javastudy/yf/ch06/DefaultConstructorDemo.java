@@ -17,17 +17,17 @@ public class DefaultConstructorDemo {
 
 }
 
-class Person{
+class People{
 	int age;
 	int gender;
 	
-	public Person(int age, int gender) {
+	public People(int age, int gender) {
 		this.age = age;
 		this.gender = gender;
 	}
 }
 
-class Adult extends Person {
+class Adult extends People {
 	
 	public Adult() {
 		
@@ -35,6 +35,6 @@ class Adult extends Person {
 	
 }
 
-class Child extends Person{
+class Child extends People{
 	
 }
