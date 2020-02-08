@@ -1,6 +1,14 @@
 package javastudy.yf.ch11;
 
-import java.util.ArrayList;
+/**
+ *
+ * Copyright 2020 YF Studio
+ *
+ * All right reserved.
+ * 
+ * Created on Feb 8, 2020 10:06:46 AM
+ * 
+ */
 
 public class BinarySearch {
 
@@ -12,10 +20,10 @@ public class BinarySearch {
 		if (arr[middle] == target) {
 			return middle;
 		} else if (arr[middle] > target) {
-			return binarySearch(arr, left, middle-1, target);
+			return binarySearch(arr, left, middle - 1, target);
 
 		} else {
-			return binarySearch(arr, middle+1, right, target);
+			return binarySearch(arr, middle + 1, right, target);
 		}
 	}
 
