@@ -14,11 +14,12 @@ import java.util.Scanner;
  * We don't consider Exception of input. 
  * We don't have a UI. 
  * We don't have a timer. 
- * Game players can try unlimited times until find all the mines.
+ * Game players can try unlimited times until find
+ * all the mines.
  * 
  */
 public class MineSweeperSimple {
-	
+
 	private static final int MINE_NUMBER = 5;
 	private static final int NOT_MINE = 0;
 	private static final int IS_MINE = 1;
@@ -27,31 +28,34 @@ public class MineSweeperSimple {
 
 	// print the hints and existing shots
 	public static void hint(int[][] map, int x, int y) {
-		// show neighbour of this shot
+		// show neighbor of this shot
 		for (int i = -1; i < 2; i++) {
 			for (int j = -1; j < 2; j++) {
-				if (x + i < 0 || y + j < 0) {
+
+				if (x + i < 0 || y + j < 0 || x + i > 9 || y + j > 9) {
 					continue;
 				}
-				if (map[x + i][y + j] == NOT_MINE) {
-					map[x + i][y + j] = NOT_MINE_SHOT;
+
+				if (map[x + i][y + j] == 0) {
+					map[x + i][y + j] = 3;
 					System.out.println(
 							"x axis is " + (x + i) + " and y axis is " + (y + j) + "" + ", it is not the target!");
-				} else if (map[x + i][y + j] == IS_MINE) {
+				} else if (map[x + i][y + j] == 1) {
 					// map[x + i][y + j] = MINE_FOUND;
 					System.out
 							.println("x axis is " + (x + i) + " and y axis is " + (y + j) + "" + ", this is a target!");
 
 				}
 			}
+
 		}
 		System.out.println("-------------------------------------");
-		// print all the previous shots
+		// print all the previous shots.
 		for (int i = 0; i < map.length; i++) {
 			for (int j = 0; j < map[i].length; j++) {
-				if (map[i][j] == NOT_MINE_SHOT) {
+				if (map[i][j] == 3) {
 					System.out.println("x axis is " + i + " and y axis is " + j + "" + ", it is not the target!");
-				} else if (map[i][j] == MINE_FOUND) {
+				} else if (map[i][j] == 2) {
 					System.out.println("x axis is " + i + " and y axis is " + j + "" + ", it is a found target!");
 				}
 			}
@@ -60,48 +64,50 @@ public class MineSweeperSimple {
 
 	public static void main(String[] args) {
 		// explain the game targets
-		System.out.println("This is a 10*10 map, from 0-9.");
-		System.out.println("There are totally " + MINE_NUMBER + " mines, your task is to find all the mines.");
+		System.out.println("This is a 10 * 10 map, x axis and y axis start from 0 - 9.");
+		System.out.println("There are totally "+MINE_NUMBER+"  mines, and your task is to find all the mines.");
 
-		// generate 20*20 grid
+		// generate 10*10 grid
 		/*
 		 * 0: not mine 1: mine 2: mine found 3: not mine shot
 		 * 
 		 */
 		int[][] map = new int[10][10];
-		// repeated MINE_NUMBER times generate MINE_NUMBER mines
+		// repeated at least 5 times generate 5 mines
 		int i = 0;
 		while (i < MINE_NUMBER) {
 			// generate mines generally
-			int x = (int) (Math.random() * 10); // 0-10
-			int y = (int) (Math.random() * 10); // 0-10
-			if (map[x][y] == IS_MINE) {
+			int x = (int) (Math.random() * 10); // 0-9
+			int y = (int) (Math.random() * 10); // 0-9
+			if (map[x][y] == 1) {
 				continue;
 			}
-			map[x][y] = IS_MINE;
+			map[x][y] = 1;
 			i++;
 		}
 
 		// ready to accept user input
 		Scanner input = new Scanner(System.in);
+		// how many mines been found
 		int find = 0;
 
 		// start to accept user input
 		while (find < MINE_NUMBER) {
-			// generate mines generally
 			int clickX, clickY;
 			System.out.println("please enter the x axis of mine");
 			clickX = input.nextInt();
 			System.out.println("please enter the y axis of mine ");
 			clickY = input.nextInt();
 
-			if (map[clickX][clickY] == IS_MINE) {
-				map[clickX][clickY] = MINE_FOUND;
+			if (map[clickX][clickY] == 1) {
+				map[clickX][clickY] = 2;
 				find++;
-				System.out.println("You find a mine! Now you found " + find + "mines!");
+				System.out.println("You find a mine! Now you found " + find + " mines and " + (MINE_NUMBER - find) + " left!");
 
+			} else if (map[clickX][clickY] == 2) {
+				System.out.println("You have found this target, try again!");
 			} else {
-				map[clickX][clickY] = NOT_MINE_SHOT;
+				map[clickX][clickY] = 3;
 				System.out.println("You miss!");
 				hint(map, clickX, clickY);
 			}
