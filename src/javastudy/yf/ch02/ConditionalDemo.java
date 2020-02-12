@@ -26,12 +26,7 @@ public class ConditionalDemo {
         result = someCondition ? value1 : value2;
 
         System.out.println(result);
-        
-        for(int i =1 ;i < 301 ; i++) {
-        	if(301%i==0) {
-        		System.out.println(i);
-        	}
-        }
+
         
         // test short-circuiting
         boolean b = 5 < 3;
