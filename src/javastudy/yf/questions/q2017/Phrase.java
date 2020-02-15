@@ -8,7 +8,7 @@ package javastudy.yf.questions.q2017;
  * 
  * Created on Jan 23, 2020 11:26:54 AM
  * 
- * 2017 AP® COMPUTER SCIENCE A FREE-RESPONSE QUESTION 2
+ * 2017 AP® COMPUTER SCIENCE A FREE-RESPONSE QUESTION 3
  * 
  */
 
