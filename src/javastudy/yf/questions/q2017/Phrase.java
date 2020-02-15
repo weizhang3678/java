@@ -42,8 +42,8 @@ public class Phrase {
 		}
 		/* to be implemented in part (a) */
 		String str1 = currentPhrase.substring(0, findNthOccurrence(currentPhrase, n));
-		String str2 = currentPhrase.substring(findNthOccurrence(currentPhrase, n) + repl.length());
-		currentPhrase = str1 + str2;
+		String str2 = currentPhrase.substring(findNthOccurrence(currentPhrase, n) + str.length());
+		currentPhrase = str1 + repl + str2;
 	}
 
 	/**
