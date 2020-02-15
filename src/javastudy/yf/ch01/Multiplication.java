@@ -14,15 +14,27 @@ import java.util.Scanner;
 * 
 */
 public class Multiplication {
+	
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
+		
 		System.out.println("Please input a number:");
+		
 		int firstNumber = scanner.nextInt();
+		
 		System.out.println("Please input a number again:");
+		
 		int secondNumber = scanner.nextInt();
+		
 		int product = firstNumber * secondNumber;
+		
 		String str = "The product of " + firstNumber + " and " + secondNumber + " is " + product +".";
+		
 		System.out.println(str);
+		
 		scanner.close();
+		
 	}
+	
 }
