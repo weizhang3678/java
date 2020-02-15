@@ -15,5 +15,13 @@ public class ForDemo {
         for(int i=1; i<11; i++){
              System.out.println("Count is: " + i);
         }
+        
+        
+        // infinite loop, and block this process
+        for (int i=0;;) {
+            System.out.print("*");
+        }
+        
+       
    }
 }
