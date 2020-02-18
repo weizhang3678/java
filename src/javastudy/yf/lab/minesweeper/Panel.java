@@ -16,9 +16,9 @@ public class Panel implements KeyListener
 
     private Block [][] pane;
 
-    private static int SIZEX = 16;
-    private static int SIZEY = 30;
-    private static int MINENUMBER = 99;
+    private static int SIZEX = 15;
+    private static int SIZEY = 15;
+    private static int MINENUMBER = 45;
 
     private int mineLeft;
     private int blockLeft;
