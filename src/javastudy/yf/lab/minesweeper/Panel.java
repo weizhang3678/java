@@ -76,7 +76,7 @@ public class Panel implements KeyListener
         TimeRecord.setText(String.valueOf(timeRecord));
         panel.add(TimeRecord);
 
-        JLabel labelMine = new JLabel("Numbers of mines:");
+        JLabel labelMine = new JLabel("Numbers:");
         labelMine.setHorizontalAlignment(JLabel.CENTER);
         labelMine.setFocusable(false);
         panel.add(labelMine);
