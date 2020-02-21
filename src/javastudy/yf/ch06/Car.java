@@ -1,5 +1,15 @@
 package javastudy.yf.ch06;
 
+/**
+*
+* Copyright 2020 YF Studio
+*
+* All right reserved.
+* 
+* Created on Feb 21, 2020 3:47:36 PM
+* 
+*/
+
 public class Car {
 	
 	private double price;
@@ -54,7 +64,6 @@ public class Car {
 
 
 	public static void main(String[] args) {
-
 
 	}
 
