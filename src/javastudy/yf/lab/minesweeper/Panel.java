@@ -112,9 +112,9 @@ public class Panel implements KeyListener
         for (int i = 0; i < SIZEX; i++)
         for (int j = 0; j < SIZEY; j++)
         {
-            pane[i][j] = new Block();							//加入方格
+            pane[i][j] = new Block();							
             pane[i][j].setHorizontalAlignment(JLabel.CENTER);
-            pane[i][j].setOpaque(true);							//不透明的标签
+            pane[i][j].setOpaque(true);							
             panel.add(pane[i][j]);
             int nowi = i;
             int nowj = j;
@@ -340,7 +340,6 @@ public class Panel implements KeyListener
         }
         catch (IOException e1)
         {
-            // TODO 自动生成的 catch 块
             e1.printStackTrace();
         }
     }

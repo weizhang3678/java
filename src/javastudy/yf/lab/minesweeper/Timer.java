@@ -18,7 +18,7 @@ public class Timer implements Runnable
         time = 0;
         this.panel1 = (JPanel)frame.getContentPane();			
 
-        JLabel labelTime = new JLabel("用 时:");					
+        JLabel labelTime = new JLabel("Seconds:");					
         labelTime.setHorizontalAlignment(JLabel.CENTER);
         labelTime.setFocusable(false);
         panel1.add(labelTime);									
