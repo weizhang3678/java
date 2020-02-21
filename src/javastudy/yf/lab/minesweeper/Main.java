@@ -13,7 +13,7 @@ class Main extends JFrame {
 
 	public Main() {
 		setTitle("MineSweeper"); // set title
-		setSize(SIZEY * 60, (SIZEX + 1) * 60); // set size
+		setSize(SIZEY * 48, (SIZEX + 1) * 51); // set size
 		setLocation(20, 10); // set location
 		setResizable(false); // set size non-modifiable
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // set close mode
