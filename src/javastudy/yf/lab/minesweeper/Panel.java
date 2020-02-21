@@ -49,7 +49,7 @@ public class Panel implements KeyListener
             {
                 FileReader myFile = new FileReader(Records);
                 int ch;
-                while(true)							//读入记录
+                while(true)							
                 {
                     ch = myFile.read();
                     if (ch == -1)
@@ -63,9 +63,9 @@ public class Panel implements KeyListener
             }
         }
 
-        MyTimer = new Timer(frame);				//创建计时器
+        MyTimer = new Timer(frame);				
 
-        JLabel labelRecord = new JLabel("记录:");
+        JLabel labelRecord = new JLabel("Records:");
         labelRecord.setHorizontalAlignment(JLabel.CENTER);
         labelRecord.setFocusable(false);
         panel.add(labelRecord);
@@ -76,7 +76,7 @@ public class Panel implements KeyListener
         TimeRecord.setText(String.valueOf(timeRecord));
         panel.add(TimeRecord);
 
-        JLabel labelMine = new JLabel("雷数:");
+        JLabel labelMine = new JLabel("Numbers of mines:");
         labelMine.setHorizontalAlignment(JLabel.CENTER);
         labelMine.setFocusable(false);
         panel.add(labelMine);
@@ -85,9 +85,9 @@ public class Panel implements KeyListener
         MineLeft.setHorizontalAlignment(JTextField.CENTER);
         MineLeft.setEditable(false);
         MineLeft.setFocusable(false);
-        panel.add(MineLeft);									//添加至主面板中
+        panel.add(MineLeft);									
 
-        JLabel labelRestart = new JLabel("重来");
+        JLabel labelRestart = new JLabel("Replay");
         labelRestart.setHorizontalAlignment(JLabel.CENTER);
         labelRestart.setFocusable(false);
         panel.add(labelRestart);
