@@ -13,7 +13,7 @@ package javastudy.yf.ch06;
 public class Coin {
 
 	// constant to represent heads
-	private static int HEADS = 1;
+	private final static int HEADS = 1;
 
 	// current value of the coin
 	private int value = 0;
