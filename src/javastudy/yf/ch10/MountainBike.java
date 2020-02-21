@@ -28,4 +28,5 @@ public class MountainBike extends Bicycle {
     public void setHeight(int newValue) {
         seatHeight = newValue;
     }   
+    
 }

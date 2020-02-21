@@ -13,9 +13,9 @@ package javastudy.yf.ch10;
 public class Bicycle {
     
     // the Bicycle class has three fields
-    public int cadence;
-    public int gear;
-    public int speed;
+    protected int cadence;
+    protected int gear;
+    protected int speed;
         
     // the Bicycle class has one constructor
     public Bicycle(int startCadence, int startSpeed, int startGear) {
