@@ -21,6 +21,10 @@ class People{
 	int age;
 	int gender;
 	
+	public People() {
+		
+	}
+	
 	public People(int age, int gender) {
 		this.age = age;
 		this.gender = gender;
