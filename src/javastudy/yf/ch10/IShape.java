@@ -10,6 +10,7 @@ package javastudy.yf.ch10;
 * 
 */
 public interface IShape {
+  int testField = 100;
   int getArea();
   int getPerimeter();
 }
