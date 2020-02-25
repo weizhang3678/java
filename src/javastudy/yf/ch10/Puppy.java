@@ -15,6 +15,10 @@ public class Puppy extends Dog{
     	System.out.println("creating a Puppy without initializing data...");
     }
     
+    public void feed() {
+    	System.out.println("Puppy needs milk");
+    }
+    
 	public static void main(String[] args) {
 		new Puppy();
 
