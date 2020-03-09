@@ -1,5 +1,7 @@
 package javastudy.yf.ch09;
 
+import java.util.Arrays;
+
 /**
  *
  * Copyright 2020 YF Studio
@@ -14,7 +16,7 @@ public class MultiDimArrayDemo {
     public static void main(String[] args) {
     	// This is a simple 2D arrays
     	 int[][] ns = {
-    	            { 1, 2, 3, 4 },
+    	            { 1, 2, 3, 4, 6 },
     	            { 5, 6, 7, 8 },
     	            { 9, 10, 11, 12 }
     	        };
@@ -35,10 +37,12 @@ public class MultiDimArrayDemo {
         // declare arrays
         int[][] ticketInfo;
         String[][] seatingChart;
+        int[][] d;
 
         // create arrays
         ticketInfo = new int [2][3];
         seatingChart =  new String [3][2];
+        d = new int[5][];
 
         // initialize the array elements
         ticketInfo[0][0] = 15;
@@ -54,5 +58,12 @@ public class MultiDimArrayDemo {
         seatingChart[2][0] = "Emma";
         seatingChart[2][1] = "Luke";
         
+       for(int i = 0 ; i < d.length; i++) {
+    	  d[i] = new int[i+1];
+    	  for(int j = 0; j< i+1; j++) {
+    		  d[i][j] = i+ j;
+    	  }
+       }
+       System.out.println(Arrays.deepToString(d));
     }
 }
