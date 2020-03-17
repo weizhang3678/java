@@ -43,7 +43,8 @@ public class MultiDimArrayDemo {
         ticketInfo = new int [2][3];
         seatingChart =  new String [3][2];
         d = new int[5][];
-
+        System.out.println(Arrays.deepToString(d));
+        
         // initialize the array elements
         ticketInfo[0][0] = 15;
         ticketInfo[0][1] = 10;

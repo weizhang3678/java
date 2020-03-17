@@ -18,17 +18,21 @@ public class StringDemo {
 	public static void main(String[] args) {
 		
 		// initialize string object
-		String string1 = "Hello,";
+		String string1 = "hello";
 		String string2 = "world!";
 		String string3 = new String("hello");
 		String string4 = new String(new char[] {'h', 'e', 'l', 'l', 'o', '!'});
-																									
+	    
+		System.out.println(string3.equals(string1));
+		System.out.println(string3==string1);
+		System.out.println("hello"==string1);
 		
 		// variable s refer to another Sting object, not the original one changes to new one.
 		String s = "Hello";
         System.out.println(s);
         s = s.toUpperCase();
         System.out.println(s);
+        
         
         // length of String
         System.out.println(string1.length()); 

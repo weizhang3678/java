@@ -1,5 +1,7 @@
 package javastudy.yf.ch06;
 
+import java.util.Calendar;
+
 /**
  *
  * Copyright 2020 YF Studio
@@ -15,17 +17,25 @@ public class Person {
 	private String name;
 	private String email;
 	private String phoneNumber;
+	private int age;
 
 	// constructor
 	public Person(String theName) {
 		this.name = theName;
 	}
-	
+
 	// constructor
 	public Person(String name, String email, String phoneNumber) {
-		this.name = name;
+		//this.name = name;
+		this(name);
 		this.email = email;
 		this.phoneNumber = phoneNumber;
+	}
+	
+	public Person(String name, String email, String phoneNumber, int age) {
+
+		this(name,phoneNumber, email);
+		this.age = age;
 	}
 
 	// methods - getters
@@ -56,13 +66,11 @@ public class Person {
 //	public String toString() {
 //		return this.name + " " + this.email + " " + this.phoneNumber;
 //	}
-	
+
 	public String toString() {
-		return "name is "+this.name + "\nemail is " + this.email + "\nphone is " + this.phoneNumber;
+		return "name is " + this.name + "\nemail is " + this.email + "\nphone is " + this.phoneNumber;
 	}
 
-	
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -70,8 +78,6 @@ public class Person {
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -90,13 +96,20 @@ public class Person {
 		return true;
 	}
 
+	public void test(int... params) {
+		for (int param : params) {
+			System.out.println(param);
+		}
+	}
+
 	public static void main(String[] args) {
-		Person sana = new Person("Sana", "sana@gmail.com","3065559999");
-		Person mary = new Person("Mary", "sana@gmail.com","3065559999");
+		Person sana = new Person("Sana", "sana@gmail.com", "3065559999");
+		Person mary = new Person("Mary", "sana@gmail.com", "3065559999");
 		System.out.println(sana);
-		//Person p2 = new Person("Jean");
-		//p2.setEmail("jean@gmail.com");
-		//p2.setPhoneNumber("404 899-9955");
-		//System.out.println(p2);
+		// Person p2 = new Person("Jean");
+		// p2.setEmail("jean@gmail.com");
+		// p2.setPhoneNumber("404 899-9955");
+		// System.out.println(p2);
+		mary.test(22, 33, 44);
 	}
 }

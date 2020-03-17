@@ -1,5 +1,6 @@
 package javastudy.yf.questions.q2016;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -83,6 +84,22 @@ public class StringFormatter {
 	}
 	
 	public static void main(String[] args) {
+		//["AP", "COMP", "SCI", "ROCKS"]
+		ArrayList<String> list1 = new ArrayList<String>();
+		list1.add("AP");
+		list1.add("COMP");
+		list1.add("SCI");
+		list1.add("ROCKS");
+		System.out.println(format(list1, 20));
+
+		//["GREEN", "EGGS", "AND", "HAM"]
+		ArrayList<String> list2 = new ArrayList<String>();
+		list2.add("GREEN");
+		list2.add("EGGS");
+		list2.add("AND");
+		list2.add("HAM");
+		System.out.println(format(list2, 20));
+		
 		
 	}
 
