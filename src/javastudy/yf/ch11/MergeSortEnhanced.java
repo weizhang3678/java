@@ -16,10 +16,10 @@ public class MergeSortEnhanced {
 	// Merges two subarrays of arr[].
 	// First subarray is arr[l..m]
 	// Second subarray is arr[m+1..r]
-	public static void merge(int arr[], int l, int m, int r) {
+	public static void merge(int arr[], int left, int middle, int right) {
 		// Find sizes of two subarrays to be merged
-		int n1 = m - l + 1;
-		int n2 = r - m;
+		int n1 = middle - left + 1;
+		int n2 = right - middle;
 
 		/* Create temp arrays */
 		int L[] = new int[n1];
@@ -27,9 +27,9 @@ public class MergeSortEnhanced {
 
 		/* Copy data to temp arrays */
 		for (int i = 0; i < n1; ++i)
-			L[i] = arr[l + i];
+			L[i] = arr[left + i];
 		for (int j = 0; j < n2; ++j)
-			R[j] = arr[m + 1 + j];
+			R[j] = arr[middle + 1 + j];
 
 		/* Merge the temp arrays */
 
@@ -37,7 +37,7 @@ public class MergeSortEnhanced {
 		int i = 0, j = 0;
 
 		// Initial index of merged subarry array
-		int k = l;
+		int k = left;
 		while (i < n1 && j < n2) {
 			if (L[i] <= R[j]) {
 				arr[k] = L[i];
@@ -66,17 +66,17 @@ public class MergeSortEnhanced {
 
 	// Main function that sorts arr[l..r] using
 	// merge()
-	public static void mergeSort(int arr[], int l, int r) {
-		if (l < r) {
+	public static void mergeSort(int arr[], int left, int right) {
+		if (left < right) {
 			// Find the middle point
-			int m = (l + r) / 2;
+			int m = (left + right) / 2;
 
 			// Sort first and second halves
-			mergeSort(arr, l, m);
-			mergeSort(arr, m + 1, r);
+			mergeSort(arr, left, m);
+			mergeSort(arr, m + 1, right);
 
 			// Merge the sorted halves
-			merge(arr, l, m, r);
+			merge(arr, left, m, right);
 		}
 	}
 

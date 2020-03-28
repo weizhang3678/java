@@ -22,14 +22,14 @@ public class MergeSort {
 	   }
 
 	   private static void mergeSort(int[] elements,
-	                                       int from, int to, int[] temp)
+	                                       int left, int right, int[] temp)
 	   {
-	       if (from < to)
+	       if (left < right)
 	       {
-	          int middle = (from + to) / 2;
-	          mergeSort(elements, from, middle, temp);
-	          mergeSort(elements, middle + 1, to, temp);
-	          merge(elements, from, middle, to, temp);
+	          int middle = (left + right) / 2;
+	          mergeSort(elements, left, middle, temp);
+	          mergeSort(elements, middle + 1, right, temp);
+	          merge(elements, left, middle, right, temp);
 	       }
 	   }
 
